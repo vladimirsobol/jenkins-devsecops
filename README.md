@@ -1,5 +1,4 @@
 
-## Layout of this repository
 
 ``` bash
 .
