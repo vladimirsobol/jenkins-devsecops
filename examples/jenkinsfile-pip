@@ -26,10 +26,10 @@ pipeline {
                         pretestedIntegration(gitIntegrationStrategy: accumulated(),
                         integrationBranch: "$MASTER_BRANCH",
                         repoName: 'origin'),
-                        [$class: 'UserIdentity', email: 'release@praqma.net', name: 'ReleasePraqma']],
+                        [$class: 'UserIdentity', email: 'admin@localhost', name: 'ReleasePraqma']],
                         submoduleCfg: [],
-                        userRemoteConfigs: [[credentialsId: 'jenkins', //remember to change credentials and url.
-                        url: 'git@github.com:Praqma/isom-test.git']]])
+                        userRemoteConfigs: [[credentialsId: 'your_user', //remember to change credentials and url.
+                        url: 'your_report']]])
 
                     // Do the build,test etc.
                     sh'echo hello world'
