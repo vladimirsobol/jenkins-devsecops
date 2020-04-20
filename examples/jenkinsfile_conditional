@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment { 
-        docker_username = 'praqmasofus' //insert your own docker username here
+        docker_username = 'alexandrust88' //insert your own docker username here
   }
   stages {
     stage('clone down') {
