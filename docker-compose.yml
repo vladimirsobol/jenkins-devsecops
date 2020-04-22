@@ -1,7 +1,7 @@
 version: "3" #
 services:
   jenkins:
-    image: praqma/jenkins-kata-jenkins:latest
+    image: alexandrust88/jenkins-k-jenkins:latest
     user: root
     ports:
       - "8001:8080"
