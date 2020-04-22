@@ -1,4 +1,4 @@
-# URL For your Jenkins instance
+#testing dont use it # URL For your Jenkins instance
 JENKINS_URL=http://yourIP:port
 # Username for your account on the Jenkins server
 USERNAME=admin
