@@ -29,9 +29,15 @@ pipeline {
       }
     }
 
-    stage('Archive the artifacts') {
+    stage('Run the tests') {
+      agent {
+        docker {
+          image 'gradle:jdk11'
+        }
+
+      }
       steps {
-        archiveArtifacts(artifacts: '*', allowEmptyArchive: true)
+        sh 'ci/unit-test-app.sh'
       }
     }
 
