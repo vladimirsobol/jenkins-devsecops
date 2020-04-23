@@ -1,9 +1,28 @@
 pipeline {
-  agent { label 'host' }
+  agent {
+    label 'host'
+  }
   stages {
-    stage('') {
-      steps {
-        sh 'echo "Hello fellas"'
+    stage('Echo step') {
+      parallel {
+        stage('Echo step') {
+          steps {
+            sh 'echo "Hello fellas"'
+          }
+        }
+
+        stage('Build app') {
+          agent {
+            docker {
+              image 'gradle:jdk11'
+            }
+
+          }
+          steps {
+            sh 'ci/build-app.sh'
+          }
+        }
+
       }
     }
 
