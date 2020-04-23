@@ -26,5 +26,11 @@ pipeline {
       }
     }
 
+    stage('Archive the artifacts') {
+      steps {
+        archiveArtifacts(artifacts: 'app/build/libs/', allowEmptyArchive: true)
+      }
+    }
+
   }
 }
